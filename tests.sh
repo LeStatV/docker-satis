@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-IMAGE_NAME="LeStatV/docker-satis"
+IMAGE_NAME="lestatv/docker-satis"
 VERSION="4.3"
 CONTAINER_NAME="satis-test"
 EXIT_CODE=0
