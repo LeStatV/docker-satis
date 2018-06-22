@@ -12,23 +12,23 @@ RUN apt-get update && apt-get install -y --force-yes --no-install-recommends \
 	build-essential \
 	software-properties-common \
 	cron \
-	nano \
-	git \
-	curl \
-	supervisor \
-	php \
-	php-mcrypt \
-	php-tidy \
-	php-cli \
-	php-common \
-	php-curl \
-	php-intl \
-	php-fpm \
+ 	nano \
+ 	git \
+ 	curl \
+ 	supervisor \
+ 	php5 \
+ 	php5-mcrypt \
+ 	php5-tidy \
+ 	php5-cli \
+ 	php5-common \
+ 	php5-curl \
+ 	php5-intl \
+ 	php5-fpm \
  	php-apc \
-	nginx \
-	ssh \
-	npm \
-	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+ 	nginx \
+ 	ssh \
+ 	npm \
+ 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php5/fpm/php.ini \
 	&& sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php5/cli/php.ini \
