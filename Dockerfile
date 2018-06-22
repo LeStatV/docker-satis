@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y --force-yes --no-install-recommends \
 	php-curl \
 	php-intl \
 	php-fpm \
-	php-apc \
+# 	php-apc \
 	nginx \
 	ssh \
 	npm \
