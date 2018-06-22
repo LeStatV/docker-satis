@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 MAINTAINER Yannick Pereira-Reis <yannick.pereira.reis@gmail.com>
 
@@ -12,14 +12,14 @@ RUN apt-get update && apt-get install -y --force-yes --no-install-recommends \
 	git \
 	curl \
 	supervisor \
-	php5 \
-	php5-mcrypt \
-	php5-tidy \
-	php5-cli \
-	php5-common \
-	php5-curl \
-	php5-intl \
-	php5-fpm \
+	php \
+	php-mcrypt \
+	php-tidy \
+	php-cli \
+	php-common \
+	php-curl \
+	php-intl \
+	php-fpm \
 	php-apc \
 	nginx \
 	ssh \
