@@ -13,7 +13,7 @@ function build() {
   docker build -t "${IMAGE_NAME}:${VERSION}" ./
   check_errors $?
   docker login -u "${DOCKER_USERNAME}" -p "${DOCKER_PASSWORD}"
-  docker push $(IMAGE_NAME):$(VERSION)
+  docker push ${IMAGE_NAME}:${VERSION}
 }
 
 function run() {
