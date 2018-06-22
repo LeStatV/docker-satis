@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-IMAGE_NAME="ypereirareis/docker-satis"
+IMAGE_NAME="LeStatV/docker-satis"
 VERSION="4.3"
 CONTAINER_NAME="satis-test"
 EXIT_CODE=0
@@ -30,7 +30,7 @@ function run() {
 function test_all() {
   echo "=== START"
   build
-  run
+#   run
   echo "=== END"
 }
 
