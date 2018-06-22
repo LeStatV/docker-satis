@@ -1,8 +1,12 @@
-FROM ubuntu:16.04
+FROM ubuntu:15.10
 
 MAINTAINER Yannick Pereira-Reis <yannick.pereira.reis@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
+
+RUN sed -i s/archive.ubuntu/old-releases.ubuntu/g /etc/apt/sources.list
+
+RUN sed -i s/security.ubuntu/old-releases.ubuntu/g /etc/apt/sources.list
 
 RUN apt-get update && apt-get install -y --force-yes --no-install-recommends \
 	build-essential \
@@ -20,7 +24,7 @@ RUN apt-get update && apt-get install -y --force-yes --no-install-recommends \
 	php-curl \
 	php-intl \
 	php-fpm \
-# 	php-apc \
+ 	php-apc \
 	nginx \
 	ssh \
 	npm \
