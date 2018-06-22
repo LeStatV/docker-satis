@@ -53,7 +53,11 @@ echo " >> Copying host ssh key from /var/tmp/id to /root/.ssh/id_rsa"
 cp /var/tmp/id /root/.ssh/id_rsa
 chmod 600 /root/.ssh/id_rsa
 
-chmod 600 /root/.ssh/id_rsa
+if [ ! -z "$SATIS_GIT_SECRET" ]; then
+    echo " >> Create HTTP auth for git"
+    echo $SATIS_GIT_SECRET > /root/.git-credentials
+    git config --global credential.helper store
+fi
 
 echo " >> Building Satis for the first time"
 scripts/build.sh
